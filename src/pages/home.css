@@ -1,0 +1,13 @@
+.home footer{
+    height: 100%;
+}
+.home h1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    
+}
+.home .main-img {
+    width: 100vw;
+    height: 100vw;
+    padding-bottom: 25%;
+}

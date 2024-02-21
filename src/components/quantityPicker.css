@@ -1,0 +1,12 @@
+.quantityPicker button {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  .quantityPicker label {
+    font-weight: 600;
+    color: #736940;
+  }
+  .quantityPicker button {
+    background-color: #48941f5b;
+  }

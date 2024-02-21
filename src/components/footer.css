@@ -1,0 +1,24 @@
+footer {
+    background-color: #F9D4BB;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    width: 100vw;
+    height: 30vw;
+}
+.footFlex{
+    display: flex;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10%;
+
+}
+.nav-item{
+    margin-left: 15%;
+    color: black;
+}
+.footerHeader h1{
+    color: #535353ed;
+    font-size: 45px;
+}
