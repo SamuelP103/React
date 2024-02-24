@@ -4,34 +4,35 @@ import QuantityPicker from "../components/quantityPicker";
 import { useEffect, useState } from "react";
 
 function Product(props) {
-  const[quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(1);
   
+
   useEffect(function () {
-    console.log("hello product");
+    console.log("Hello im a product");
   }, []);
 
   function onQuantityChange(qty) {
-    setQuantity((prevQuantity) => prevQuantity + qty);
+    setQuantity(qty);
+    console.log("the quantity has changed", qty);
   }
 
   function getTotal() {
     const total = props.data.price * quantity;
     return total.toFixed(2);
   }
-  function adding() {
-    console.log('adding');
 
-    const prod4Cart = {
-      ...props.data
+  function addItem() {
+    const itemCart = {
+      ...props.data,
+      quantity: quantity,
     };
-    console.log('adding', prod4Cart);
-  
-  let service = new DataService();
-  service.addToCart(prod4Cart);
+
+    let service = new DataService();
+    service.addToCart(itemCart);
+    console.log("item added", itemCart);
   }
 
-  
-return (
+  return (
     <div className="product">
     <img src={"/img/" + props.data.image} alt=""></img>
     <h5>{props.data.title}</h5>
@@ -42,7 +43,7 @@ return (
     <div className='controls'>
         <QuantityPicker onQuantityChange={onQuantityChange}></QuantityPicker>
 
-        <button onClick={adding}className="btn btn-small btn-primary">Add</button>
+        <button onClick={addItem}className="btn btn-small btn-primary">Add</button>
     </div>
     </div>
 );

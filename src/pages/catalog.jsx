@@ -15,14 +15,15 @@ function Catalog(){
         loadCatalog();
     },[]);
     function loadCatalog(){
-        let service =  new DataService;
+        let service =  new DataService();
         let products = service.getProducts();
-        setProducts(products);console.log(products);
+        setProducts(products);
+        console.log(products);
     };
     return (
         <div className="catalog">
         <h1>Here look at my {productState.length} cool products</h1>
-        {productState.map((productData, index) => <Product key={index} data={productData} />)}
+        {productState.map((productArrow) => <Product key={productArrow._id} data={productArrow} />)}
 
         
         

@@ -75,6 +75,12 @@ class DataService {
             return [];
         }
     }
-
+    removeItem(prodId) {
+        //
+        // get the cart
+        //find and remove prod with id
+        // save the cart
+    }
 }
+    
 export default DataService;

@@ -9,6 +9,7 @@ import Home from "./pages/home";
 import About from "./pages/about.jsx";
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Admin from "./admin.jsx";
+import Cart from "./pages/cart";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/about' element={ <About/>}/>
         <Route path='/catalog' element={ <Catalog/>}/>
         <Route path='/admin' element={ <Admin/>}/>
+        <Route path="/cart" element={<Cart />}></Route>
       </Routes>
       
       <Footer></Footer>
