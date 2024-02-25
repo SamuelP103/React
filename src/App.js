@@ -1,4 +1,5 @@
 import "./App.css";
+
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import QuantityPicker from "./components/quantityPicker";
@@ -10,6 +11,9 @@ import About from "./pages/about.jsx";
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Admin from "./admin.jsx";
 import Cart from "./pages/cart";
+
+
+
 
 function App() {
   return (

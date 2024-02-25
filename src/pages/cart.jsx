@@ -1,10 +1,12 @@
 import "./cart.css";
 import { useEffect, useState } from "react";
 import DataService from "../services/dataService";
+import { Link } from 'react-router-dom';
 
 function Cart() {
   const [cartList, setCartList] = useState([]);
-  useEffect(function () {
+
+  useEffect(() => {
     loadCart();
   }, []);
 
@@ -19,7 +21,6 @@ function Cart() {
     const total = (prod.price || 0) * (prod.quantity || 0);
     return total.toFixed(2);
   }
-  
 
   function getCartTotal() {
     let total = 0;
@@ -53,6 +54,9 @@ function Cart() {
         <div className="aside">
           <h4>Your Total</h4>
           <label>${getCartTotal()}</label>
+          <Link to="./orderConfirm">
+            <button className="btn btn-info checkOut">Check out</button>
+            </Link>
         </div>
       </div>
     </div>
