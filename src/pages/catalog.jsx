@@ -14,9 +14,9 @@ function Catalog(){
         console.log("component is loaded");
         loadCatalog();
     },[]);
-    function loadCatalog(){
+    async function loadCatalog(){
         let service =  new DataService();
-        let products = service.getProducts();
+        let products = await service.getProducts();
         setProducts(products);
         console.log(products);
     };

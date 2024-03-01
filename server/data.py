@@ -1,5 +1,4 @@
-import axios from 'axios';
-let catalog = [
+catalog = [
     {
     "title":"Water",
     "category":"Household",
@@ -49,43 +48,4 @@ let catalog = [
     "image":"socks.jpeg",
     "_id":"7"
     }
-];
-
-class DataService {
-
-    async getProducts(){
-       // return catalog;
-       
-    let response = await axios.get("http://127.0.0.1:5000/api/products");
-    return response.data;
-       
-    }
-    addToCart(prod){
-        let cart = this.readCart();
-        cart.push(prod);
-
-        const jsonCart = JSON.stringify(cart); 
-        localStorage.setItem('cart',jsonCart);
-
-
-    }
-
-    readCart(){
-
-        const jsonCart = localStorage.getItem("cart");
-        if(jsonCart){
-            return JSON.parse(jsonCart);
-        }
-        else {
-            return [];
-        }
-    }
-    removeItem(prodId) {
-        //
-        // get the cart
-        //find and remove prod with id
-        // save the cart
-    }
-}
-    
-export default DataService;
+]
